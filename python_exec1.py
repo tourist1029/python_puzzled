@@ -41,6 +41,35 @@ print(z)
 print(z.real)
 print(z.imag)
 
+#\t,\n的用法
+print('Temperature:\t20\tC\nPressure:\t5\tPa.')
+#格式化字符串用法
+quantity = 33.4785
+print("{name} {value:3.2f}".format(name="quantity", value=quantity))
+print("we {} in LaTex \\begin {{equation}}".format('like'))
+
+#列表合并zip， 按照长度最小的列表合并，返回一个元组列表
+ind = [0,1,2,3,4]
+color = ['red', 'green', 'black', 'blue']
+kk = list(zip(color,ind))
+print(kk)
+
+L = [2,3,10,1,5]
+L2 = [x*2 for x in L]
+L3 = [x*2 for x in L if 4<x<=10]
+print(L2)
+print(L3)
+M = [[1,2,3],[4,5,6]]
+flat = [M[i][j] for i in range(2) for j in range(3)]
+print(M)
+print(flat)
+
+
+
+
+
+
+
 
 
 
