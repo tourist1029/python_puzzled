@@ -5,6 +5,7 @@ from scipy import linalg
 from scipy.interpolate import spline
 
 print("hello python math")
+print("why could not push??")
 
 
 
