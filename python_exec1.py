@@ -64,6 +64,19 @@ flat = [M[i][j] for i in range(2) for j in range(3)]
 print(M)
 print(flat)
 
+print("for the test reset")
+
+M = array([[1.,2.],[3.,4.]])
+V = array([1.,2.,3.])
+print(V[0])
+print(V[:2])
+print(M[0,1])
+V[:2] = [10, 20]
+print(V[:2])
+
+
+print("for the f1 branch!")
+
 
 
 
