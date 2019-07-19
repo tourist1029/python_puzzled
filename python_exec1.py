@@ -1,5 +1,6 @@
 import sys
 import math
+import array
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import linalg
@@ -59,24 +60,41 @@ L2 = [x*2 for x in L]
 L3 = [x*2 for x in L if 4<x<=10]
 print(L2)
 print(L3)
-M = [[1,2,3],[4,5,6]]
-flat = [M[i][j] for i in range(2) for j in range(3)]
-print(M)
-print(flat)
+# M = [[1,2,3],[4,5,6]]
+# flat = [M[i][j] for i in range(2) for j in range(3)]
+# print(M)
+# print(flat)
 
 print("for the test reset")
 
-M = array([[1.,2.],[3.,4.]])
-V = array([1.,2.,3.])
+M = np.array([[1.,2.],[3.,4.]])
+V = np.array([1.,2.,3.])
 print(V[0])
 print(V[:2])
 print(M[0,1])
 V[:2] = [10, 20]
 print(V[:2])
-
+print(V)
+print("M lengths is ", len(M))
+print('V length is: ', len(V))
 
 print("for the f1 branch!")
 print('for the second f1 commit')
+
+#集合用{}表示，并自动取消重复的元素
+A = {1,2,3,4,4}
+B = {5}
+C = A.union(B)
+D = A.intersection(C)
+E = C.difference(A)
+print(A)
+print(C)
+print(D)
+print(E)
+
+
+
+
 
 
 
