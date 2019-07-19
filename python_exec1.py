@@ -92,6 +92,18 @@ print(C)
 print(D)
 print(E)
 
+#线性代数部分内容
+v = np.array([1,2,3,4,5])
+print(type(v))
+
+v1 = np.array([1.,2.,3.])
+v2 = np.array([2, 0, 1.])
+print(v1)
+print(v2)
+print(2*v1)
+print(v1/2)
+print(3*v1)
+print(3*v1+2*v2)
 
 
 
