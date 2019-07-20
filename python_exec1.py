@@ -5,7 +5,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import linalg
 from scipy.interpolate import spline
+from scipy.linalg import solve
 import scipy
+import scipy.linalg as sl
 
 
 print("hello python math")
@@ -68,7 +70,8 @@ print(L3)
 print("for the test reset")
 
 M = np.array([[1.,2.],[3.,4.]])
-V = np.array([1.,2.,3.])
+V = np.array([1.,2.])
+N = np.array([[4.,5.],[7.,9.],[8., 6.]])
 print(V[0])
 print(V[:2])
 print(M[0,1])
@@ -82,17 +85,100 @@ print("for the f1 branch!")
 print('for the second f1 commit')
 
 #集合用{}表示，并自动取消重复的元素
-A = {1,2,3,4,4}
-B = {5}
-C = A.union(B)
-D = A.intersection(C)
-E = C.difference(A)
-print(A)
-print(C)
-print(D)
-print(E)
+# A = {1,2,3,4,4}
+# B = {5}
+# C = A.union(B)
+# D = A.intersection(C)
+# E = C.difference(A)
+# print(A)
+# print(C)
+# print(D)
+# print(E)
 
+# print('矩阵向量乘积为：', np.dot(V, M))
+# print('矩阵与矩阵乘积：', np.dot(N, M))
 
+# A = np.array([[1., 2.],[3., 4.]])
+# b = np.array([1., 4.])
+# x = solve(A, b)
+# print(type(x))
+# print(type(A))
+# print(type(b))
+# print(x)
+# print(np.allclose(np.dot(A, x), b))
+# print(A.shape)
+# print(N.ndim) #表示列数，即维数  
+# print(N)
+# print(N.shape)
+# print(N.dtype)
+# print(N.strides)
+# #创建复数数组
+# # vv = np.array([1, 2, 5, 6, 7], dtype=complex)
+# # print(vv)
+
+# id = np.array([[1, 0],
+#                 [0, 1]])
+
+print('****************************************************')
+# kk1 = np.zeros((3, 3))
+# kk2 = np.ones((3, 3))
+# kk3 = np.diag((3, 4, 5, 6))
+# kk4 = np.random.rand(4,4)
+# kk5 = np.arange(7, dtype=float)
+# kk6 = np.linspace(1, 10 , 10)
+# kk7 = np.zeros_like(N)
+# print(kk1)
+# print(kk2)
+# print(kk3)
+# print(kk4)
+# print(kk5)
+# print(kk6)
+# print(kk7)
+
+# MM = np.identity(5)
+# print(MM)
+# print(MM.shape)
+# print(np.shape(MM))
+
+# T = np.zeros((2, 5))
+# print(T)
+# print(T.ndim)
+
+# vv = np.array([0,1,2,3,4,5])
+# mm = vv.reshape(2,3)
+# nn = mm.T
+# print(vv)
+# print(mm)
+# print(vv)
+# print(nn)
+# kk = np.array([1,3,45,6,7,8])
+# ll = kk.T
+# print(kk)
+# print(ll)
+
+# AA = np.array([[1,2,3,4], [5,6,7,8]])
+# print(AA)
+# print(AA.sum(axis=0))
+# print(AA.sum(axis=1))
+
+MM = np.array([[1, 2],[3, 4]])
+V = M[0,:]
+
+V[-1] = 0
+print(MM)
+print(V)
+
+print(V.base)
+print(MM.base)
+
+NN = np.array(MM.T)
+print(NN)
+print(NN.base is None)
+
+A = np.array([[1,2],[3,4]])
+B = np.array([[1,2],[3,4]])
+
+print((A == B).all())
 
 
 
